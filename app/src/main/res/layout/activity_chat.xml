@@ -1,0 +1,103 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/EtiquetaLatitud"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Latitud"
+        android:textSize="14dp"
+        android:layout_alignBaseline="@+id/longitud"
+        android:layout_alignBottom="@+id/longitud"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+
+    <TextView
+        android:id="@+id/latitud"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="medias y valor recomendado"
+        android:textSize="14dp"
+        android:layout_below="@+id/lblMessage"
+        android:layout_alignLeft="@+id/EtiquetaLongitud"
+        android:layout_alignStart="@+id/EtiquetaLongitud" />
+
+    <TextView
+        android:id="@+id/EtiquetaLongitud"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Longitud"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/longitud"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="medias y valor recomendado"
+        android:textSize="14dp" />
+
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_mail_id"
+        android:hint="Introduzca Email"
+        android:layout_below="@+id/EtiquetaLongitud"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/listView_chat_messages"
+            android:background="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:scrollbars="none"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll"
+            android:layout_below="@+id/editText_mail_id"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="1dp"
+            android:layout_above="@+id/editText_chat_message" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_chat_message"
+            android:hint="Introduzca su Mensaje"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/button_send_chat"
+            android:layout_toStartOf="@+id/button_send_chat" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:id="@+id/button_send_chat"
+            android:singleLine="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+

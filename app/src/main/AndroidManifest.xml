@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.proyecto.sigti" >
+
+    <!-- To access Google+ APIs: -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+ To retrieve OAuth 2.0 tokens or invalidate tokens to disconnect a user. This disconnect
+     option is required to comply with the Google+ Sign-In developer policies
+    -->
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" /> <!-- To retrieve the account name (email) as part of sign-in: -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" /> <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Creates a custom permission so only this app can receive its messages.
+    com.androidhive.pushnotifications
+    -->
+    <permission
+        android:name="restaurantandroid.comsats.com.loguin.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="restaurantandroid.comsats.com.loguin.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+
+    <!-- Permission to vibrate -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <activity
+            android:name=".vista.VistaFormularioEjecuciones"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name=".notificaciones.ResgistroActivity"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- Main Activity -->
+
+        <receiver
+            android:name=".notifica.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="net.proyecto.sigti" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".notifica.GcmIntentService" />
+
+        <activity
+            android:name=".notifica.MainActivityNotificacion"
+            android:label="@string/title_activity_chat" >
+        </activity>
+        <activity
+            android:name=".notifica.ChatActivity"
+            android:label="@string/title_activity_chat" >
+        </activity>
+
+        <!-- Registro del BroadcastReceiver
+        <receiver android:name=".notifica.MyReceiver"/>-->
+
+        <receiver android:name=".miResibimiento"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

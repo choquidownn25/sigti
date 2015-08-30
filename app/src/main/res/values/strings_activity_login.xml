@@ -1,0 +1,14 @@
+<resources>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+        <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_registre">Registrar</string>
+    <string name="invalid_email">This email address is invalid</string>
+    <string name="invalid_password">Password is too short</string>
+    <string name="incorrect_password">Password is incorrect</string>
+    <string name="field_required">This field is required</string>
+    <string name="username">Usuario</string>
+    <string name="password">Password</string>
+    <string name="title_activity_chat">Chat</string>
+</resources>

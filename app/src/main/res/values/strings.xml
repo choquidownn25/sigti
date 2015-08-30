@@ -1,0 +1,55 @@
+<resources>
+
+    <string name="app_name">sigti</string>
+    <string name="navigation_drawer_open">Abre navegacion</string>
+    <string name="navigation_drawer_close">Cierra Navegacion</string>
+    <string name="title_activity_main">Push de Notificationes</string>
+    <string name="error_config">Por favor ajuste los set de compilacion.</string>
+    <string name="already_registered">Dispositivo ya está registrado en el servidor.</string>
+    <string name="gcm_registered">De GCM: Dispositivo registrado correctamente!</string>
+    <string name="gcm_unregistered">De GCM: dispositivo con éxito sin registrar!</string>
+    <string name="gcm_message">De GCM: tienes mensaje!</string>
+    <string name="gcm_error">GCM error: error (% 1 $ s).</string>
+    <string name="gcm_recoverable_error">GCM error: error recuperable (% 1 $ s).</string>
+    <string name="gcm_deleted">GCM error: servidor eliminado %1$d mensajes pendientes!</string>
+    <string name="server_registering">Intentando Tratar (%1$d/%2$d) para registrar el dispositivo en la demo del servidor.</string>
+    <string name="server_registered">Demostración del servidor: dispositivo agregado con éxito!</string>
+    <string name="server_unregistered">Demostración del servidor: dispositivo eliminado con éxito!</string>
+    <string name="server_register_error">No se pudo registrar el dispositivo en el Servidor después de %1$d varios Intentos.</string>
+    <string name="server_unregister_error">No se puede anular el registro de dispositivo en el servidor (%1$s).</string>
+    <string name="options_register">Registro</string>
+    <string name="options_unregister">Anular Registro</string>
+    <string name="options_clear">Limpiar</string>
+    <string name="options_exit">Salir</string>
+
+
+    <string-array name="countries">
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Sri Lanka</item>
+        <item>China</item>
+        <item>Bangladesh</item>
+        <item>Nepal</item>
+        <item>Afghanistan</item>
+        <item>North Korea</item>
+        <item>South Korea</item>
+        <item>Japan</item>
+    </string-array>
+
+    <!-- Lista de titulos de navegacion-->
+    <string-array name="nav_options">
+        <item>Home</item>
+        <item>Perfil</item>
+        <item>Mapas</item>
+        <item>Mapa Base</item>
+        <item>Camara</item>
+        <item>Etiquetas</item>
+        <item>Configuración</item>
+        <item>Compartir</item>
+        <item>South Korea</item>
+        <item>Japan</item>
+    </string-array>
+    <string name="hello_world">Hola Mundo</string>
+    <string name="action_settings" />
+    <string name="cancel">Cancelar</string>
+</resources>
