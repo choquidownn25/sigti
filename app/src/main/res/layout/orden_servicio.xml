@@ -1,26 +1,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:gravity="center_vertical|center_horizontal"
-    android:orientation="vertical" android:paddingBottom="@dimen/activity_vertical_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#ABBDD0"
+    tools:context=".LoginActivity"
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true">
 
     <LinearLayout
         android:id="@+id/ll1"
         android:layout_width="match_parent"
-        android:layout_height="34dp"
+        android:layout_height="40dp"
         android:gravity="center_vertical|center_horizontal">
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Numero Orden :  "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Orden :  "
             android:id="@+id/id_orden_servicio"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
@@ -29,11 +33,13 @@
             android:padding="1dip" />
 
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=" "
+            android:textColor="#ffffffff"
             android:id="@+id/textViewid_orden_servicio"
             android:width="@dimen/abc_alert_dialog_button_bar_height"
             android:layout_gravity="right"
@@ -92,15 +98,20 @@
                         android:layout_column="0"
                         android:padding="5dip" />
 
-                <EditText  android:id="@+id/textViewFecha" android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:hint="@string/prompt_password"
-                    android:imeActionLabel="@string/action_sign_in"
-                    android:imeOptions="actionUnspecified"
-                    android:maxLines="1" android:singleLine="true"
-                    android:layout_marginBottom="10dp"
-                    android:textColorHint="#ffffffff"
-                    android:textColor="#ffffffff">
-                </EditText>
+                    <EditText  android:id="@+id/textViewFecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:imeActionLabel="@string/action_sign_in"
+                        android:imeOptions="actionUnspecified"
+                        android:maxLines="1" android:singleLine="true"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#ffffffff"
+                        android:textColor="#ffffffff">
+                    </EditText>
 
 
                     <TextView
@@ -115,8 +126,13 @@
                         android:layout_column="0"
                         android:padding="3dip"  />
 
-                    <EditText  android:id="@+id/textnumero_wo" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:hint="@string/prompt_password"
+                    <EditText  android:id="@+id/textnumero_wo"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:imeActionLabel="@string/action_sign_in"
                         android:imeOptions="actionUnspecified"
                         android:maxLines="1" android:singleLine="true"
@@ -130,7 +146,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Cuadrilla"
+                        android:text="Responsible Cuadrilla"
                         android:id="@+id/textView6"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
@@ -138,8 +154,119 @@
                         android:layout_column="0"
                         android:padding="5dip"/>
 
-                    <EditText android:id="@+id/textViewid_coordinador" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:hint="@string/prompt_password"
+                    <EditText android:id="@+id/textViewid_coordinador"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeActionLabel="@string/action_sign_in"
+                        android:imeOptions="actionUnspecified"
+                        android:maxLines="1" android:singleLine="true"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#ffffffff"
+                        android:textColor="#ffffffff">
+                    </EditText>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="IBS"
+                        android:id="@+id/textView8"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0"
+                        android:padding="5dip"/>
+
+                    <EditText android:id="@+id/textViewibs_cliente"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeActionLabel="@string/action_sign_in"
+                        android:imeOptions="actionUnspecified"
+                        android:maxLines="1" android:singleLine="true"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#ffffffff"
+                        android:textColor="#ffffffff">
+                    </EditText>
+
+                    <!--
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Nombre"
+                            android:id="@+id/textView10"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_column="0"
+                            android:padding="5dip" />
+
+                        <EditText android:id="@+id/textViewNombreCliente" android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:hint="@string/prompt_password"
+                            android:imeActionLabel="@string/action_sign_in"
+                            android:imeOptions="actionUnspecified"
+                            android:maxLines="1" android:singleLine="true"
+                            android:layout_marginBottom="10dp"
+                            android:textColorHint="#ffffffff"
+                            android:textColor="#ffffffff">
+                        </EditText> -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Jornada"
+                        android:id="@+id/textView10"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0"
+                        android:padding="5dip" />
+
+                    <EditText android:id="@+id/textViewNombreJornada"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeActionLabel="@string/action_sign_in"
+                        android:imeOptions="actionUnspecified"
+                        android:maxLines="1" android:singleLine="true"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#ffffffff"
+                        android:textColor="#ffffffff">
+                    </EditText>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Hora"
+                        android:id="@+id/textView12"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0"
+                        android:padding="5dip" />
+
+                    <EditText android:id="@+id/textViewJornada"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:imeActionLabel="@string/action_sign_in"
                         android:imeOptions="actionUnspecified"
                         android:maxLines="1" android:singleLine="true"
@@ -154,61 +281,20 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Cliente"
-                        android:id="@+id/textView8"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_column="0"
-                        android:padding="5dip"/>
-
-                    <EditText android:id="@+id/textViewdocumento" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:hint="@string/prompt_password"
-                        android:imeActionLabel="@string/action_sign_in"
-                        android:imeOptions="actionUnspecified"
-                        android:maxLines="1" android:singleLine="true"
-                        android:layout_marginBottom="10dp"
-                        android:textColorHint="#ffffffff"
-                        android:textColor="#ffffffff">
-                    </EditText>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Nombre"
-                        android:id="@+id/textView10"
+                        android:id="@+id/textViewClientess"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
                         android:layout_column="0"
                         android:padding="5dip" />
 
-                    <EditText android:id="@+id/textViewNombreCliente" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:hint="@string/prompt_password"
-                        android:imeActionLabel="@string/action_sign_in"
-                        android:imeOptions="actionUnspecified"
-                        android:maxLines="1" android:singleLine="true"
-                        android:layout_marginBottom="10dp"
-                        android:textColorHint="#ffffffff"
-                        android:textColor="#ffffffff">
-                    </EditText>
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <EditText android:id="@+id/textViewClientes"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Jornada"
-                        android:id="@+id/textView12"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_column="0"
-                        android:padding="5dip" />
-
-                    <EditText android:id="@+id/textViewJornada" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:hint="@string/prompt_password"
                         android:imeActionLabel="@string/action_sign_in"
                         android:imeOptions="actionUnspecified"
                         android:maxLines="1" android:singleLine="true"
@@ -216,7 +302,6 @@
                         android:textColorHint="#ffffffff"
                         android:textColor="#ffffffff">
                     </EditText>
-
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -230,8 +315,13 @@
                         android:layout_column="0"
                         android:padding="5dip" />
 
-                    <EditText android:id="@+id/textViewDireccion" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:hint="@string/prompt_password"
+                    <EditText android:id="@+id/textViewDireccion"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:imeActionLabel="@string/action_sign_in"
                         android:imeOptions="actionUnspecified"
                         android:maxLines="1" android:singleLine="true"
@@ -253,8 +343,13 @@
                         android:layout_column="0"
                         android:padding="5dip" />
 
-                    <EditText  android:id="@+id/textViewCategoria" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:hint="@string/prompt_password"
+                    <EditText  android:id="@+id/textViewCategoria"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:imeActionLabel="@string/action_sign_in"
                         android:imeOptions="actionUnspecified"
                         android:maxLines="1" android:singleLine="true"
@@ -277,8 +372,13 @@
                         android:layout_column="0"
                         android:padding="5dip" />
 
-                    <EditText android:id="@+id/textViewid_servicio" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:hint="@string/prompt_password"
+                    <EditText android:id="@+id/textViewid_servicio"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:imeActionLabel="@string/action_sign_in"
                         android:imeOptions="actionUnspecified"
                         android:maxLines="1" android:singleLine="true"
@@ -301,8 +401,43 @@
 
 
 
-                    <EditText  android:id="@+id/textViewcodigo_ciudad" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:hint="@string/prompt_password"
+                    <EditText  android:id="@+id/textViewcodigo_ciudad"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeActionLabel="@string/action_sign_in"
+                        android:imeOptions="actionUnspecified"
+                        android:maxLines="1" android:singleLine="true"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#ffffffff"
+                        android:textColor="#ffffffff">
+                    </EditText>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Fecha Programada"
+                        android:id="@+id/textlblFechaprogramada"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0"
+                        android:padding="5dip" />
+
+
+
+                    <EditText  android:id="@+id/textViewFehaProgramada"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:imeActionLabel="@string/action_sign_in"
                         android:imeOptions="actionUnspecified"
                         android:maxLines="1" android:singleLine="true"
@@ -324,8 +459,13 @@
                         android:padding="5dip" />
 
 
-                    <EditText  android:id="@+id/textViewid_novedades" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:hint="@string/prompt_password"
+                    <EditText  android:id="@+id/textViewid_novedades"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:imeActionLabel="@string/action_sign_in"
                         android:imeOptions="actionUnspecified"
                         android:maxLines="1" android:singleLine="true"
@@ -339,8 +479,68 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Evento"
+                        android:text="Estado"
                         android:id="@+id/textView24"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0"
+                        android:padding="5dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/appLongitud"
+                        android:id="@+id/textView15"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0"
+                        android:padding="5dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/textViewLongitud"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0"
+                        android:padding="5dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/appLatitud"
+                        android:id="@+id/textView17"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0"
+                        android:padding="5dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+
+                        android:id="@+id/textViewLatitud"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0"
+                        android:padding="5dip" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Accion a Ejecutar"
+                        android:id="@+id/textView27"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
@@ -351,17 +551,72 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/spinner2"
-
                         android:layout_column="1"
                         android:padding="10dip"/>
 
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Accion a Ejecutar"
+                        android:id="@+id/textView28"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0"
+                        android:padding="5dip" />
+
+                    <Spinner
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner3"
+                        android:layout_column="1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10dip"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="Evento Spinner"
+                        android:id="@+id/estado"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0"
+                        android:padding="1dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:id="@+id/evento"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_column="0"
+                        android:padding="1dip" />
+
+
+                    <EditText  android:id="@+id/textViewComentario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeActionLabel="@string/action_sign_in"
+                        android:imeOptions="actionUnspecified"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:layout_marginBottom="10dp"
+                        android:textColorHint="#ffffffff"
+                        android:textColor="#ffffffff">
+                    </EditText>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/eventoordenes"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
@@ -374,8 +629,6 @@
         </ScrollView>
     </LinearLayout>
 
-
-
     <LinearLayout
         android:id="@+id/ll3"
         android:layout_width="match_parent"
@@ -387,8 +640,11 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Actualizar"
+            android:text="Ejecutar"
             android:id="@+id/actualizar"
+            android:textStyle="bold"
+
+
             android:layout_column="1" />
 
 

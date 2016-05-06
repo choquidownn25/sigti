@@ -1,6 +1,13 @@
 <resources>
 
-    <string name="app_name">sigti</string>
+    <string name="appLongitud">Longitud</string>
+    <string name="appLatitud">Latitud</string>
+
+    <string name="sample_text_header">Sample card header</string>
+    <string name="sample_text_footer">Sample card footer</string>
+    <string name="sample_text_image">Sample image</string>
+
+    <string name="app_name">Sigti</string>
     <string name="navigation_drawer_open">Abre navegacion</string>
     <string name="navigation_drawer_close">Cierra Navegacion</string>
     <string name="title_activity_main">Push de Notificationes</string>
@@ -21,7 +28,18 @@
     <string name="options_unregister">Anular Registro</string>
     <string name="options_clear">Limpiar</string>
     <string name="options_exit">Salir</string>
+    <string name="options_aceptar">Aceptar</string>
+    <string name="urlinsertar">http://sigti.co/directv/insertar.php</string>
+    <string name="urlconsulta">http://sigti.co/directv/consultafototecnico.php</string>
+    <string name="urlsubefoto">http://sigti.co/directv/upload.php</string>
+    <string name="urlinsertarfoto">http://sigti.co/directv/insertarFoto.php</string>
+    <string name="urlactivo">http://sigti.co/directv/activos/tablayout.php</string>
+    <string name="urlpersonalactivo">http://sigti.co/directv/activos/ordendetrabajoactivo.php</string>
 
+    <string name="action_back">Atras</string>
+    <string name="label_pointa">Punto A</string>
+    <string name="label_pointb">Punto B</string>
+    <string name="label_calcrout">Calcular Ruta</string>
 
     <string-array name="countries">
         <item>India</item>
@@ -39,17 +57,45 @@
     <!-- Lista de titulos de navegacion-->
     <string-array name="nav_options">
         <item>Home</item>
+        <item>Orden de Trabajo</item>
+        <item>Mapa Ruta</item>
+
+        <item>Registro Celular</item>
+        <item>Orden de Trabajo</item>
+        <item>Mapa Ruta</item>
         <item>Perfil</item>
-        <item>Mapas</item>
-        <item>Mapa Base</item>
-        <item>Camara</item>
         <item>Etiquetas</item>
         <item>Configuración</item>
         <item>Compartir</item>
         <item>South Korea</item>
         <item>Japan</item>
     </string-array>
+
+    <string-array name="image_ids">
+        <item>@drawable/image_1</item>
+        <item>@drawable/image_2</item>
+        <item>@drawable/image_3</item>
+
+        <item>@drawable/image_4</item>
+
+        <item>@drawable/image_5</item>
+
+        <item>@drawable/image_6</item>
+        <item>@drawable/image_7</item>
+        <item>@drawable/image_8</item>
+
+        <item>@drawable/image_9</item>
+    </string-array>
+
     <string name="hello_world">Hola Mundo</string>
     <string name="action_settings" />
+    <string name="action_salir">Salir</string>
     <string name="cancel">Cancelar</string>
+    <string name="appwidget_text">texto</string>
+    <string name="hello">Hola</string>
+    <string name="take_pic">Orden Servicio</string>
+    <string name="sample_text_foter">prueba</string>
+    <string name="str_enviaremos">Enviar</string>
+    <string name="str_mensajes">Texto</string>
+    <string name="str_para">Numero</string>
 </resources>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="2"
+    android:versionName="2.0"
     package="net.proyecto.sigti" >
 
     <!-- To access Google+ APIs: -->
@@ -9,7 +11,7 @@
      option is required to comply with the Google+ Sign-In developer policies
     -->
 
-    <!-- Keeps the processor from sleeping when a message is received. -->
+    <!-- Keeps the processor from s leeping when a message is received. -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,30 +19,58 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" /> <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!-- Creates a custom permission so only this app can receive its messages.
     com.androidhive.pushnotifications
     -->
     <permission
-        android:name="restaurantandroid.comsats.com.loguin.permission.C2D_MESSAGE"
+        android:name="net.proyecto.sigti.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="restaurantandroid.comsats.com.loguin.permission.C2D_MESSAGE" />
-
+    <uses-permission android:name="net.proyecto.sigti.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
     <!-- This app has permission to register and receive data message. -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
 
     <!-- Permission to vibrate -->
     <uses-permission android:name="android.permission.VIBRATE" />
 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!--
+    <uses-library
+        android:name="com.google.android.maps"
+        android:required="false" /> -->
+
+    <!-- Permisos para el Mapa -->
+    <!--
+    <permission android:name="net.proyecto.sigti.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+    -->
+
+    <permission
+        android:name="net.proyecto.sigti.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="net.proyecto.sigti.permission.MAPS_RECEIVE"/>
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo_sigti_48"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".SplashActivity"
+
+            android:name=".notifica.NotificaAlMainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -61,20 +91,75 @@
             android:label="@string/app_name" >
         </activity>
 
+        <activity android:name=".popup.ShowPopupWindows"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            >
+
+        </activity>
+
+        <activity android:name=".popup.ShowpopupWindowsVistaFormulario"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"></activity>
+
+        <activity android:name=".popup.ToastPersonalizado"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"></activity>
+
         <activity
             android:name=".notificaciones.ResgistroActivity"
             android:label="@string/app_name">
+        </activity>
+
+        <activity android:name=".GridActiviti"
+            android:label="@string/app_name" >
+
+        </activity>
+
+        <activity android:name=".MarcoMainActivity"
+            android:label="@string/app_name">
+
         </activity>
 
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
         </activity>
-
+        <!-- Cambio de Splash a NotificaAlMain -->
+        <activity android:name=".SplashActivity" android:label="@string/app_name"></activity>
+        <activity android:name=".camara.Camara" android:label="@string/app_name"></activity>
+        <activity android:name=".vista.EntradaFoto" android:label="@string/app_name"></activity>
+        <activity android:name=".MainActivityCarViewMarco" android:label="@string/app_name"></activity>
+        <activity android:name=".tablelayout.TabLayoutService" android:label="@string/app_name"></activity>
         <!-- Main Activity -->
+        <activity android:name=".popup.DialogActivity" android:label="@string/app_name"
+                android:theme="@android:style/Theme.Holo.Light.Dialog"></activity>
+
+        <activity android:name=".vista.FormMainActivity" android:label="@string/app_name"></activity>
+        <activity android:name=".popup.ProgresbarDialogoLatLong"
+                  android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"></activity>
+
+        <activity android:name=".contenga.Contenedora"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+        </activity>
+
+        <activity android:name=".exepciones.MensajeExepcion" android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"></activity>
+
+        <receiver android:name=".alerta.NewAppWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
 
         <receiver
             android:name=".notifica.GcmBroadcastReceiver"
+            android:exported="true"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
 
@@ -98,14 +183,66 @@
             android:label="@string/title_activity_chat" >
         </activity>
 
-        <!-- Registro del BroadcastReceiver
-        <receiver android:name=".notifica.MyReceiver"/>-->
+        <activity
+            android:name=".mapas.MapaRuta"
+            android:label="@string/app_name">
+        </activity>
 
-        <receiver android:name=".miResibimiento"/>
+        <activity
+            android:name=".mapas.MapaPosicion"
+            android:label="@string/app_name">
+        </activity>
+
+        <activity android:name=".notifica.NotificaMinMainActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".contenga.PContenedora"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+
+        </activity>
+
+
+        <!-- Registro del BroadcastReceiver-->
+        <receiver android:name=".notifica.MyReceiver"/>
+
+        <receiver android:name=".notifica.PasaLatLong"/>
+
+
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+
+      <meta-data
+          android:name="com.google.android.geo.API_KEY"
+          android:value="AIzaSyDBDgYvlgF-x1iR2mVgDej5q3DKRjCryFU"/>
+        <!--
+            <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyDBDgYvlgF-x1iR2mVgDej5q3DKRjCryFU"/>
+
+   AIzaSyDdWDE4CHJpY4meeiY7N8HPLiCaiNTFS-Q
+
+  <meta-data
+      android:name="com.google.android.gms.version"
+      android:value="@integer/google_play_services_version" />
+
+   AIzaSyBCmuLoFqnvl08l4crnVRV183nvdm7S4Ic
+     Esta es la ultima
+          <meta-data
+              android:name="com.google.android.geo.API_KEY"
+              android:value="AIzaSyDdWDE4CHJpY4meeiY7N8HPLiCaiNTFS-Q"/>
+
+
+   -->
+
     </application>
 
 </manifest>

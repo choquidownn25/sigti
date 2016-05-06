@@ -1,15 +1,22 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'chika'
+            keyPassword '1234567'
+            storeFile file('C:/Users/choqu_000/AndroidStudioProjects/sigti/clave/keystore.release.jks')
+            storePassword '1234567'
+        }
+    }
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
-
     defaultConfig {
         applicationId "net.proyecto.sigti"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 1
-        versionName "1.0"
+        versionName "2.0"
+        versionCode 2
     }
     buildTypes {
         release {
@@ -17,24 +24,55 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'com.google.android.gms:play-services:7.5.+'
-    compile "com.android.support:support-v4:18.0.+"
-    compile 'com.google.android.gms:play-services-fitness:7.5.+'
-    compile 'com.google.android.gms:play-services-wearable:7.5.+'
-    compile 'com.google.android.gms:play-services-gcm:7.5.+'
-    compile 'com.google.android.gms:play-services-location:7.5.+'
-    compile 'com.android.support:support-v4:13.0.+'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    //compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:design:22.2.1'
+    //compile 'com.android.support:appcompat-v7:22.2.1'
+    androidTestCompile 'com.android.support:appcompat-v7:22.+'
+    compile 'com.android.support:design:22.2.1'
+    //compile 'com.google.android.gms:play-services:7.5.+'
+    //compile 'com.google.android.gms:play-services-plus:8.1.0'
+    compile 'com.android.support:support-v4:22.+'
+    //compile 'com.google.android.gms:play-services-fitness:7.5.+'
+    compile 'com.google.android.gms:play-services-fitness:8.1.0'
+    //compile 'com.google.android.gms:play-services-wearable:7.5.+'
+    compile 'com.google.android.gms:play-services-wearable:8.1.0'
+    //compile 'com.google.android.gms:play-services-gcm:7.5.+'
+    compile 'com.google.android.gms:play-services-gcm:8.1.0'
+    //compile 'com.google.android.gms:play-services:6.5.87'
+    //compile 'com.google.android.gms:play-services-location:7.5.+'
+    compile 'com.google.android.gms:play-services-location:8.1.0'
+    //compile 'com.android.support:support-v4:13.0.+'
     //compile 'com.google.android.gms:play-services:3.1.+'
-
+    compile 'com.google.android.gms:play-services-maps:8.1.0'
     // Testing dependencies
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.1'
     androidTestCompile 'com.android.support.test:runner:0.2'
     androidTestCompile 'com.android.support:support-annotations:22.1.1'
-
-
+    // Dependencies for android tests which reside in the "androidTest" src folder.
+    androidTestCompile 'com.android.support.test:runner:0.4.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+    // Dependencies for unit tests which reside in the "tests" src folder.
+    testCompile 'org.mockito:mockito-core:1.10.8'
+    testCompile 'org.hamcrest:hamcrest-core:1.3'
+    testCompile 'org.json:json:20090211'
+    // Added to resolve conflicts between the app build and the test build. The app build resolves
+    // the jsr305 dependency to version 1.3.9, but in the test build the espresso-core dependency
+    // resolves jsr305 to 2.0.1. Declaring a compile dependency on jsr305 2.0.1 will ensure 2.0.1 or
+    // greater is used for both app and test builds.
+    compile 'com.google.code.findbugs:jsr305:2.0.1'
+    // Needed to implement the IdlingResource interface on certain async models.
+    compile 'com.android.support.test.espresso:espresso-idling-resource:2.0'
+    compile 'com.google.guava:guava:18.0'
+    // Dependencies for android tests which reside in the "androidTest" src folder.
+    androidTestCompile 'com.android.support.test:runner:0.4.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+    compile 'com.android.support:cardview-v7:22.0.+'
+    compile 'com.android.support:recyclerview-v7:22.0.+'
 }

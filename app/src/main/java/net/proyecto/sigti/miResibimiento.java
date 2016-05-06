@@ -14,6 +14,6 @@ public final class miResibimiento extends BroadcastReceiver {
                 " de unos milisegundos, deberia de la tarea a un servicio", Toast.LENGTH_LONG).show();
 
         MainActivity mostrar = new MainActivity();
-        mostrar.showRednoEncontrada();
+        //mostrar.mostarAlertaToast();
     }
 }

@@ -110,7 +110,7 @@ public class LoginActivity extends ActionBarActivity implements LoaderCallbacks<
             @Override
             public void onClick(View view) {
                 dialog = ProgressDialog.show(LoginActivity.this, "",
-                        "VAlidacion de Usuario...", true);
+                        "Validacion de Usuario...", true);
 
                 new Thread(new Runnable() {
                     @Override
@@ -151,9 +151,10 @@ public class LoginActivity extends ActionBarActivity implements LoaderCallbacks<
             String datoPassword;
 
             httpclient=new DefaultHttpClient();
-            httppost= new HttpPost("http://192.168.1.124/webserviceloguin/check.php"); // make sure the url is correct. 192.168.1.124
-            //httppost= new HttpPost("http://192.168.1.195/webserviceloguin/check.php"); // make sure the url is correct.
-            //httppost= new HttpPost("http://127.0.0.1/webserviceloguin/check.php"); // make sure the url is correct.
+            //httppost= new HttpPost("http://192.168.1.124/webserviceloguin/check.php"); // make sure the url is correct.  192.168.0.13
+            //httppost= new HttpPost("http://192.168.0.13/webserviceloguin/check.php"); // make sure the url is correct. 192.168.1.124
+            httppost= new HttpPost("http://192.168.0.13/webservice/check.php"); // make sure the url is correct.
+            //httppost= new HttpPost("http://192.168.43.2/webserviceloguin/check.php"); // make sure the url is correct.
             //add your data
             nameValuePairs = new ArrayList<NameValuePair>(2);
             // Utilice siempre el mismo nombre de variable por publicar es decir,
@@ -253,6 +254,7 @@ public class LoginActivity extends ActionBarActivity implements LoaderCallbacks<
                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                 builder.setTitle("Red no Encontrada.");
                 builder.setMessage("Usuario no identifica la Red.")
+
                         .setCancelable(false)
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {

@@ -1,5 +1,9 @@
 <resources>
     <!-- Base application theme. -->
+    <style name="AppThemes" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+    </style>
+    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorControlNormal">#ffffff</item>
         <item name="colorControlActivated">@color/accent</item>
@@ -7,6 +11,11 @@
         <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
         <item name="android:autoCompleteTextViewStyle">@style/RobotoAutoCompleteTextViewStyle</item>
         <item name="android:editTextStyle">@style/RobotoEditTextStyle</item>
+
+
+        <!-- customize the color palette -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
     </style>
     <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
         <item name="android:fontFamily">sans-serif-light</item>
@@ -23,4 +32,16 @@
         <item name="android:background">@drawable/fondo</item>
         <item name="android:padding">10dp</item>
     </style>
+
+    <!-- Para el spinner -->
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+
+    </style>
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+
+    </style>
+
+
+
 </resources>
